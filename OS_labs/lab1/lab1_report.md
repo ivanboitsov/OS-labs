@@ -174,6 +174,11 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 ```
+## Доказательство работы
+
+![image](https://github.com/user-attachments/assets/bb1fdf74-9770-498a-9e5a-b9b610414361) 
+![image](https://github.com/user-attachments/assets/156b89da-88ab-4cb1-8cbe-d9239cbe02a6)
+
 ## Вывод
 В результате выполнения данной лабораторной работы была написана программа на языке С++, 
 осуществляющая работу с процессами и взаимодействие между ними. Были приобретены практические 
