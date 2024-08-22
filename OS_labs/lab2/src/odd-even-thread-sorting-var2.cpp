@@ -48,11 +48,9 @@ void oddEvenSortParallel(vector<int>& arr, int maxThreads) {
 		//Четная фаза
 		for (int i = 0; i < 2; i++) {
 			threads.emplace_back(threadWorker, ref(arr), 2, i);
-			Sleep(2000);
 		}
 
 		for (auto& t : threads) {
-			Sleep(2000);
 			t.join();
 		}
 
