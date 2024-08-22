@@ -274,6 +274,8 @@ int main(int args, char* argv[]) {
 ```
 ## Доказательство работы
 
+![image](https://github.com/user-attachments/assets/6a487077-217e-4b4b-bb9e-a1ad32ee28c9)
+
 ![image](https://github.com/user-attachments/assets/e03b895b-dd85-4e7f-81b4-24e3476b2ea0)
 
 ## Вывод
