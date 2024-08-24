@@ -33,8 +33,8 @@ int main() {
     getline(cin, fileName);
 
     // Создание строки запуска дочернего процесса
-    std::string commandLine = "C:\\Users\\ivanb\\source\\repos\\OS_lab1_child\\x64\\Debug\\OS_lab1_child.exe " + fileName;
-    std::wstring wCommandLine = stringToWString(commandLine);
+    string commandLine = "C:\\Users\\ivanb\\source\\repos\\OS_lab1_child\\x64\\Debug\\OS_lab1_child.exe " + fileName;
+    wstring wCommandLine = stringToWString(commandLine);
 
     STARTUPINFO si = { sizeof(STARTUPINFO) };
     PROCESS_INFORMATION pi;
