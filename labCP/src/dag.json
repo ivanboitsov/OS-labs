@@ -1,0 +1,68 @@
+{
+    "dag":{
+        "job_1": {
+            "name" : "Reading file",
+            "type" : "csv_split",
+            "source": "./data/personal_data.csv",
+            "target": "./output_parts",
+            "parts": "4",
+            "edges" : [
+                {"to": "job_2"},
+                {"to": "job_3"},
+                {"to": "job_4"},
+                {"to": "job_5"}
+            ]  
+        },
+        "job_2": {
+            "name" : "Analyze part 1",
+            "type" : "analyze_gender_avg",
+            "input": "./output_parts/part_0.csv",
+            "edges" : [
+                {"to": "job_6"}
+            ]  
+        },
+        "job_3": {
+            "name" : "Analyze part 2",
+            "type" : "analyze_gender_avg",
+            "input": "./output_parts/part_1.csv",
+            "edges" : [
+                {"to": "job_6"}
+            ]  
+        },
+        "job_4": {
+            "name" : "Analyze part 3",
+            "type" : "analyze_gender_avg",
+            "input": "./output_parts/part_2.csv",
+            "edges" : [
+                {"to": "job_7"}
+            ]  
+        },
+        "job_5": {
+            "name" : "Analyze part 4",
+            "type" : "analyze_gender_avg",
+            "input": "./output_parts/part_3.csv",
+            "edges" : [
+                {"to": "job_7"}
+            ]  
+        },
+        "job_6": {
+            "name" : "Combinig gender stats",
+            "type" : "combine_stats",
+            "edges" : [
+                {"to": "job_8"}
+            ]  
+        },
+        "job_7": {
+            "name" : "Combinig gender stats",
+            "type" : "combine_stats",
+            "edges" : [
+                {"to": "job_8"}
+            ]  
+        },
+        "job_8": {
+            "name" : "Sending result",
+            "type" : "sending_result",
+            "edges" : []  
+        }
+    }
+}
